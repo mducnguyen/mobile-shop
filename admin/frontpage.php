@@ -1,0 +1,4 @@
+<?
+$SITEROOT = "../";
+header("location:$SITEROOT");
+?>
