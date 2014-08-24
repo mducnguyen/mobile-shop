@@ -1,3 +1,0 @@
-<?
-    $_SESSION['payment'] = 'paid';
-?>

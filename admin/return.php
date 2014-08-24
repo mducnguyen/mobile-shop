@@ -1,3 +1,0 @@
-<?
-  returnPage_admin();
-?>

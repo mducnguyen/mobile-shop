@@ -1,4 +1,0 @@
-<?
-$SITEROOT = "../";
-header("location:$SITEROOT");
-?>

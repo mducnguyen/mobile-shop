@@ -1,6 +1,0 @@
-  <h1>Về chúng tôi</h1>
-<div class="block">
-<p>
-hieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptraihieudeptrai
-</p>
-</div>
