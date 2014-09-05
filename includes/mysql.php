@@ -1,9 +1,9 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "123456789"; 
+$pass = ""; 
 $db = "shop";
-$con = mysql_connect($host.':/tmp/mysql.sock',$user,$pass);
+$con = @mysql_connect($host,$user,$pass);
 if (!$con){
   echo "<h2>Cannot connect to the database. Please try again later.</h2>";
   die();

@@ -1,17 +1,19 @@
 <?php
+  $uploaded_image = 0;
   $set_prev_page = 0;
   if(!isset($_GET['action']) || $_GET['action'] == NULL)
     returnPage_admin();
   if(!isset($_POST['add_product']) && !isset($_POST['update_product']))
     returnPage_admin();
+  include "upload_files.php";
   $name=$_POST["NAME"];
 	$description=$_POST["DESCRIPTION"];		
-	$quantity=$_POST["QUANTITY"];
+	$quantity=$_POST["QUANTITY"]   ;
  	$price=$_POST["PRICE"];
 	$guaranty=$_POST["GUARANTY"];
   $dimension=$_POST["DIMENSION"];
   $display_other=$_POST["DISPLAY_OTHER"];
-  $thumbnail=$_POST["THUMBNAIL"];
+  $thumbnail=$file_path; // variable from upload_file.php
   $offer=$_POST["OFFER"];		 
 	$brandid=$_POST["BRANDID"];
   $osid=$_POST["OSID"];
@@ -44,7 +46,7 @@
   if($_GET['action'] == 'add'){
     $query = "INSERT INTO Product(`DATEADD`,`NAME`,`DESCRIPTION`,`QUANTITY`,`PRICE`,`GUARANTY`,`THUMBNAIL`,`OFFER`,`BRAND_ID`,`OS_ID`,`DISPLAYSIZE`, `WEIGHT`,`DESIGN`,`DIMENSION`,`CAMERA`,`VIDEORECORD`,`SOUND`,`2G`,`3G`,`CPU`,`EDGE`,`WIFI`,`GPS`,`BLUETOOTH`,`RADIO`,
           `EXT_MEMORY`,`INT_MEMORY`,`JAVA`,`MESSAGING`,`DISPLAY_OTHER`,`FEATURE_OTHER`,`NETWORK`,`BATTERYINFO`,`USB`,`BROWSER`,`CAMERA_OTHER`,`QWERTY`)
-            VALUES (,'$name','$description','$quantity','$price','$guaranty','$thumbnail','$offer','$brandid','$osid','$displaysize','$weight','$design','$dimension','$camera','$videorecord','$sound','$g2','$g3','$cpu','$edge','$wifi','$gps','$bluetooth','$radio',
+            VALUES ('','$name','$description','$quantity','$price','$guaranty','$thumbnail','$offer','$brandid','$osid','$displaysize','$weight','$design','$dimension','$camera','$videorecord','$sound','$g2','$g3','$cpu','$edge','$wifi','$gps','$bluetooth','$radio',
             '$ext','$int','$java','$messaging','$display_other','$feature_other','$network','$batteryinfo','$usb','$browser','$camera_other','$qwerty')";
     $success_msg = "<h2>SUSSCESSFULLY INSERTED!!!</h2><h3><a href='?page=manage_product'>Nhấn vào đây để quay lại</a></h3>";
   }else if($_GET['action'] == 'update'){

@@ -2,7 +2,7 @@
                     <h1>Thêm sản phẩm</h1>
 </div>
 <br />
-<form name="add_product" action="?page=product_query&action=add" method="POST" >
+<form name="add_product" action="?page=product_query&action=add" method="POST"  enctype="multipart/form-data" >
 <div class="table">
 <table class="listing form" cellpadding="0" cellspacing="0">
   <tr>
@@ -21,7 +21,10 @@
   </tr>
     <tr>
     <td>Hình ảnh đại diện</td>
-    <td><input name="THUMBNAIL" type="text" size="30"  /></td>
+     <td> 
+      <input name="THUMBNAIL" type="file" size="10" /> 
+      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size; ?>" />
+    </td>
   </tr>
   <tr>
     <td>Số lượng</td>

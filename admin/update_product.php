@@ -55,7 +55,7 @@ function checked($value){
 <h1>Cập nhật sản phẩm</h1>
 </div>
 <br />
-<form name="add_product" action="?page=product_query&action=update&id=<?echo $id;?>" method="POST" >
+<form name="add_product" action="?page=product_query&action=update&id=<?echo $id;?>" method="POST" enctype="multipart/form-data">
 <div class="table">
 <table class="listing form" cellpadding="0" cellspacing="0">
   <tr>
@@ -76,7 +76,8 @@ function checked($value){
     <td>Hình ảnh đại diện</td>
     <td>
       <img src="<?echo $thumbnail;?>" width="100" height="100" alt="<?echo $name;?>" />
-      <input name="THUMBNAIL" type="text"  value="<?echo $thumbnail;?>" size="30"  /></td>
+      <input name="THUMBNAIL" type="file"  value="<?echo $thumbnail;?>" size="30"  />
+    </td>
   </tr>
   <tr>
     <td>Số lượng</td>
