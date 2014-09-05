@@ -43,7 +43,7 @@
                                   ,"8 - 10 triệu" => "8000000-10000000"
                                   ,"Trên 10 triệu" => "10000000");
               foreach($price_range as $key => $value){
-                if($value == $_GET['PRICE'])
+                if(isset($_GET['PRICE']) && $value == $_GET['PRICE'])
                   echo "<option value=\"$value\" selected=\"selected\">$key</option>";
                 else
                   echo "<option value=\"$value\">$key</option>";
